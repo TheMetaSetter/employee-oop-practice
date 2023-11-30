@@ -1,0 +1,42 @@
+My codebase has the structure like below:
+
+.
+├── CMakeLists.txt
+├── Header Files
+│   ├── Business
+│   │   ├── DailyEmployeeParser.hpp
+│   │   ├── IParsable.hpp
+│   │   ├── ManagerParser.hpp
+│   │   ├── ParserFactory.hpp
+│   │   └── ProductEmployeeParser.hpp
+│   ├── Entity
+│   │   ├── DailyEmployee.hpp
+│   │   ├── Employee.hpp
+│   │   ├── Integer.hpp
+│   │   ├── Manager.hpp
+│   │   ├── NumberFormatInfo.hpp
+│   │   ├── Object.hpp
+│   │   └── ProductEmployee.hpp
+│   └── UI
+│       ├── IValueConverter.hpp
+│       └── IntegerToCurrencyConverter.hpp
+├── Source Files
+│   ├── Business
+│   │   ├── DailyEmployeeParser.cpp
+│   │   ├── ManagerParser.cpp
+│   │   └── ProductEmployeeParser.cpp
+│   ├── Entity
+│   │   ├── DailyEmployee.cpp
+│   │   ├── Employee.cpp
+│   │   ├── Integer.cpp
+│   │   ├── Manager.cpp
+│   │   └── ProductEmployee.cpp
+│   └── UI
+│       └── IntegerToCurrencyConverter.cpp
+└── main.cpp
+
+How can I write the CMakeLists.txt file so that in every file .hpp or .cpp, I won't need to using relative path ("./" or "../" or etc.) for the #include?
+
+For example, if I want to include DailyEmployeeParser.hpp in DailyEmployeeParser.cpp file, I just need to write #include "DailyEmployeeParser.hpp" inside the file DailyEmployeeParser.cpp.
+Or if I want to include Object.hpp in IParsable.hpp, I just need to write #include "Object.hpp" inside the IParsable.hpp file.
+Or if I want to include ParserFactory.hpp in main.cpp, I just need to write #include "ParserFactory.hpp" inside the main.cpp.

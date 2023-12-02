@@ -2,18 +2,18 @@
 #include <string>
 #include <iostream>
 
-#include "Header Files/Business/ParserFactory.hpp"
-#include "Header Files/Business/DailyEmployeeParser.hpp"
-#include "Header Files/Business/ProductEmployeeParser.hpp"
-#include "Header Files/Business/ManagerParser.hpp"
-
-#include "Header Files/Entity/Employee.hpp"
-
-#include "Header Files/UI/IntegerToCurrencyConverter.hpp"
-
 using std::vector;
 using std::string;
 using std::cout, std::endl;
+
+#include "Business/ParserFactory.hpp"
+#include "Business/DailyEmployeeParser.hpp"
+#include "Business/ProductEmployeeParser.hpp"
+#include "Business/ManagerParser.hpp"
+
+#include "Entity/Integer.hpp"
+#include "UI/IntegerToCurrencyConverter.hpp"
+#include "Entity/Employee.hpp"
 
 int main()
 {

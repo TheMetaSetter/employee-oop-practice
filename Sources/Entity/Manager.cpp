@@ -12,5 +12,5 @@ Manager::Manager(int numOfManagedEmployees, int paymentPerEmployee, int baseSala
 
 void Manager::calcSalary()
 {
-    _salary = _numOfManagedEmployees * 500000 + _baseSalary;
+    _salary = _numOfManagedEmployees * _paymentPerEmployee + _baseSalary;
 }
